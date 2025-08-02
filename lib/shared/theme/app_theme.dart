@@ -12,6 +12,14 @@ class AppTheme {
       colorScheme: const ColorScheme.dark(
         primary: AppColors.primary,
       ),
+      appBarTheme: AppBarTheme(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        titleTextStyle: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.w500
+        )
+      ),
       useMaterial3: true
     );
   }
