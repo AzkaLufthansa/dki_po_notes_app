@@ -36,7 +36,7 @@ class BasicTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppDimens.radiusLg)
           ),
           padding: const EdgeInsets.all(8),
-          child: Icon(suffixIcon, color: AppColors.primarySwatch[200], size: 20),
+          child: Icon(suffixIcon, color: AppColors.primarySwatch[300], size: 20),
         ),
       ),
     );

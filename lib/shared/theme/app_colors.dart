@@ -24,8 +24,10 @@ class AppColors {
   }
   
 
-  /// App primary color
+  /// App Color Constants
   static const Color primary = Color(0xFFF6D76E);
+  static const Color surface = Color(0xFF121212);
+  static const Color surfaceTint = Color(0xFFFFFFFF);
 
   static const MaterialColor primarySwatch = MaterialColor(
     0xFFF6D76E,
