@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../features/order/presentation/screens/add_order_screen.dart';
+import '../features/order/presentation/screens/confirm_order_screen.dart';
 import '../features/order/presentation/screens/home_screen.dart';
 import '../features/splash/presentation/screens/splash_screen.dart';
 
@@ -19,6 +20,10 @@ class AppRouter {
       GoRoute(
         path: '/add_order',
         builder: (context, state) => AddOrderScreen()
+      ),
+      GoRoute(
+        path: '/confirm_order',
+        builder: (context, state) => ConfirmOrderScreen()
       ),
     ]
   );

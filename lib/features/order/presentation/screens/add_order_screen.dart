@@ -1,5 +1,6 @@
 import 'package:dki_po_notes_app/shared/widgets/text_fields/basic_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../shared/theme/app_dimens.dart';
 import '../../../../shared/widgets/buttons/custom_fab.dart';
@@ -13,7 +14,7 @@ class AddOrderScreen extends StatefulWidget {
 }
 
 class _AddOrderScreenState extends State<AddOrderScreen> {
-  final List<dynamic> _itemsSelected = [];
+  final List<dynamic> _itemsSelected = [1, 2];
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +67,10 @@ class _AddOrderScreenState extends State<AddOrderScreen> {
       ),
       floatingActionButton: CustomFAB(
         icon: Icons.shopping_bag_rounded,
-        disabled: _itemsSelected.isEmpty ? true :false
+        disabled: _itemsSelected.isEmpty ? true :false,
+        onTap: () {
+          context.push('/confirm_order');
+        },
       ),
     );
   }

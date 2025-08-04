@@ -4,3 +4,8 @@ enum HomeViewMode {
   GROUP,
   ITEM
 }
+
+enum CustomerType {
+  GROUP,
+  INDIVIDUAL
+}
