@@ -7,6 +7,7 @@ import '../../../../shared/widgets/text_fields/basic_text_field.dart';
 import '../../widgets/circle_button.dart';
 import '../../widgets/circle_button_toggle.dart';
 import '../../widgets/group_order_card.dart';
+import '../../widgets/main_drawer.dart';
 import '../../widgets/menu_order_card.dart';
 import '../../widgets/po_data_summary.dart';
 
@@ -31,11 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text(
           'Data Pre-Order',
         ),
-        leading: IconButton(
-          onPressed: () {}, 
-          icon: Icon(Icons.menu, size: 30,),
-        ),
       ),
+      drawer: HomeDrawer(),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(
           left: AppDimens.spacingBackground,
@@ -156,6 +154,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
 
 

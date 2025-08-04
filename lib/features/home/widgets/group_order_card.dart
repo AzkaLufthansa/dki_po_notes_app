@@ -44,7 +44,7 @@ class GroupOrderCard extends StatelessWidget {
                     Text(
                       'Rp. 40.000',
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.87),
                         fontWeight: FontWeight.bold
                       ),
                     ),
