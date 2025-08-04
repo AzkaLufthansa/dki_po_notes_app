@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/theme/app_colors.dart';
-import '../../../shared/theme/app_dimens.dart';
+import '../../../../../shared/theme/app_colors.dart';
+import '../../../../../shared/theme/app_dimens.dart';
 
 class PODataSummary extends StatelessWidget {
   const PODataSummary({super.key});

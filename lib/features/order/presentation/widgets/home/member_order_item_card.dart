@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/theme/app_colors.dart';
-import '../../../shared/theme/app_dimens.dart';
+import '../../../../../shared/theme/app_colors.dart';
+import '../../../../../shared/theme/app_dimens.dart';
 
 class MemberOrderItemCard extends StatelessWidget {
   const MemberOrderItemCard({super.key});

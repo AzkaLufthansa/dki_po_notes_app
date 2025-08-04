@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/theme/app_colors.dart';
-import '../../../shared/theme/app_dimens.dart';
+import '../../../../../shared/theme/app_colors.dart';
+import '../../../../../shared/theme/app_dimens.dart';
 import 'member_order_item_card.dart';
 
 class GroupOrderCard extends StatelessWidget {

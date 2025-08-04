@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../shared/enums/enums.dart';
 import '../../../../shared/theme/app_dimens.dart';
 import '../../../../shared/widgets/buttons/custom_fab.dart';
 import '../../../../shared/widgets/text_fields/basic_text_field.dart';
-import '../../widgets/circle_button.dart';
-import '../../widgets/circle_button_toggle.dart';
-import '../../widgets/group_order_card.dart';
-import '../../widgets/main_drawer.dart';
-import '../../widgets/menu_order_card.dart';
-import '../../widgets/po_data_summary.dart';
+import '../widgets/home/circle_button.dart';
+import '../widgets/home/circle_button_toggle.dart';
+import '../widgets/home/group_order_card.dart';
+import '../widgets/home/main_drawer.dart';
+import '../widgets/home/menu_card.dart';
+import '../widgets/home/po_data_summary.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -138,7 +139,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   );
                 } else if (_viewMode == HomeViewMode.ITEM) {
-                  return MenuOrderCard();
+                  return GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: AppDimens.spacingBetweenComponent,
+                      crossAxisSpacing: AppDimens.spacingBetweenComponent,
+                      mainAxisExtent: 180,
+                    ), 
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 4,
+                    itemBuilder: (context, index) {
+                      return MenuCard(
+                        addCounter: true,
+                      );
+                    },
+                  );
                 } else {
                   return const SizedBox();
                 }
@@ -149,6 +165,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: CustomFAB(
+        onTap: () {
+          context.push('/add_order');
+        },
         icon: Icons.add_rounded,
       ),
     );
